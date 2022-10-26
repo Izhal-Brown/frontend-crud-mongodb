@@ -14,7 +14,7 @@ const Detail = () => {
   },[])
 
   const getProductById = async (e) => {
-    const response = await axios.get(`https://backend-crud-m.herokuapp.com:3306/api/v2/product/${id}`);
+    const response = await axios.get(`https://backend-crud-m.herokuapp.com:3306/api/v1/product//${id}`);
     setProduct(response.data)
   }
 
