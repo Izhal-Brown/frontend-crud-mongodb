@@ -14,13 +14,13 @@ const Home = () => {
 
   // mengambil semua data product dari backend
   const getProducts = async () => {
-    const response = await axios.get("https://backend-crud-m.herokuapp.com:3306/api/v1/product");
+    const response = await axios.get("https://backend-crud-m.herokuapp.com/api/v1/product");
     setProducts(response.data)
   }
 
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`https://backend-crud-m.herokuapp.com:3306/api/v1/product/${id}`)
+      await axios.delete(`https://backend-crud-m.herokuapp.com/api/v1/product/${id}`)
       getProducts()
       alert("Data Berhasil Dihapus")
     } catch (error) {
